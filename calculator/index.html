@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body style="background-color: white">
+<style>
+  .display {
+    border: 1px solid black;
+    text-align: center-screen;
+    height: 100px;
+    margin: 5px;
+    background-color: white;
+    font-size: 50px
+  }
+  .buttons {
+      background-color: #969595;
+      border: 1px solid black;
+      color: white;
+      height: 100px;
+      width: 100px;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 10px;
+      margin: 5px;
+  }
+  .clear {
+      background-color: #969595;
+      border: solid black 1px;
+      color: white;
+      height: 100px;
+      width: 100px;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 0px;
+      margin: 5px;
+  }
+  </style>
+  <script>
+  function clicked(n) {
+    var firstnum = document.getElementById('screen').innerHTML;
+    document.getElementById('screen').innerHTML = firstnum+n;
+  }
+  function decimal() {
+    var display = document.getElementById('screen').innerHTML;
+    document.getElementById('screen').innerHTML = display + "."
+  }
+  function clearall() {
+    document.getElementById('screen').innerHTML = ""
+  }
+  function operator(operand) {
+    var firstnum = document.getElementById('screen').innerHTML;
+    document.getElementById('screen').innerHTML = firstnum + operand
+  }
+  function equals() {
+    var equation = document.getElementById('screen').innerHTML
+    answer = eval(equation);
+    document.getElementById('screen').innerHTML = answer
+  }
+  </script>
+  <table style="width:500px; padding-left:35px">
+  <tr>
+    <td colspan="3"><div class="display" id="screen"></td>
+    <td><button class="clear" onclick="clearall()" style="background-color:#282828;">clear</button></td>
+  </tr>
+  <tr>
+    <td><button class="buttons" id=7 onclick="clicked(7)">7</button></td>
+    <td><button class="buttons" id=8 onclick="clicked(8)">8</button></td>
+    <td><button class="buttons" id=6 onclick="clicked(9)">9</button></td>
+    <td><button class="buttons" style="background-color:#282828" onclick="operator('/')">/</button></td>
+  </tr>
+  <tr>
+    <td><button class="buttons" id=4 onclick="clicked(4)">4</button></td>
+    <td><button class="buttons" id=5 onclick="clicked(5)">5</button></td>
+    <td><button class="buttons" id=6 onclick="clicked(6)">6</button></td>
+    <td><button class="buttons" style="background-color:#282828" onclick="operator('*')">x</button></td>
+  </tr>
+  <tr>
+    <td><button class="buttons" id=1 onclick="clicked(1);">1</button></td>
+    <td><button class="buttons" id=2 onclick="clicked(2)">2</button></td>
+    <td><button class="buttons" id=3 onclick="clicked(3)">3</button></td>
+    <td><button class="buttons" style="background-color:#282828" onclick="operator('-')">-</button></td>
+  </tr>
+  <tr>
+    <td><button class="buttons" onclick="clicked(0)">0</button></td>
+    <td><button class="buttons" onclick="decimal()">.</button></td>
+    <td><button class="buttons" onclick="equals()">=</button></td>
+    <td><button class="buttons" style="background-color:#282828" onclick="operator('+')">+</button></td>
+  </tr>
+</table>
+</body>
