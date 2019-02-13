@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<head>
+</head>
+<style>
+  button {
+    background-color: lightgray;
+    border: none;
+    color: white;
+    display: inline-block;
+    margin: 4px 2px;
+    height: 75px;
+    width: 75px;
+    transition-duration: 0.4s;
+  }
+  button:hover {
+    background-color: yellow;
+    color:white;
+  }
+  table {
+    text-align: center;
+  }
+</style>
+<script>
+  function colorchange(n) {
+    if (document.getElementById(n).style.backgroundColor == "yellow") {
+      document.getElementById(n).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(n).style.backgroundColor = "yellow";
+    }
+    var right = n + 1
+    if (document.getElementById(right).style.backgroundColor == "yellow") {
+      document.getElementById(right).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(right).style.backgroundColor = "yellow";
+    }
+    var left = n - 1
+    if (document.getElementById(left).style.backgroundColor == "yellow") {
+      document.getElementById(left).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(left).style.backgroundColor = "yellow";
+    }
+    var bottom = n + 10
+    if (document.getElementById(bottom).style.backgroundColor == "yellow") {
+      document.getElementById(bottom).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(bottom).style.backgroundColor = "yellow";
+    }
+    var top = n - 10
+    if (document.getElementById(top).style.backgroundColor == "yellow") {
+      document.getElementById(top).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(top).style.backgroundColor = "yellow";
+    }
+  }
+  function colorchangeleft(n) {
+    if (document.getElementById(n).style.backgroundColor == "yellow") {
+      document.getElementById(n).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(n).style.backgroundColor = "yellow";
+    }
+    var right = n + 1
+    if (document.getElementById(right).style.backgroundColor == "yellow") {
+      document.getElementById(right).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(right).style.backgroundColor = "yellow";
+    }
+    var bottom = n + 10
+    if (document.getElementById(bottom).style.backgroundColor == "yellow") {
+      document.getElementById(bottom).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(bottom).style.backgroundColor = "yellow";
+    }
+    var top = n - 10
+    if (document.getElementById(top).style.backgroundColor == "yellow") {
+      document.getElementById(top).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(top).style.backgroundColor = "yellow";
+    }
+  }
+  function colorchangeright(n) {
+    if (document.getElementById(n).style.backgroundColor == "yellow") {
+      document.getElementById(n).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(n).style.backgroundColor = "yellow";
+    }
+    var left = n - 1
+    if (document.getElementById(left).style.backgroundColor == "yellow") {
+      document.getElementById(left).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(left).style.backgroundColor = "yellow";
+    }
+    var bottom = n + 10
+    if (document.getElementById(bottom).style.backgroundColor == "yellow") {
+      document.getElementById(bottom).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(bottom).style.backgroundColor = "yellow";
+    }
+    var top = n - 10
+    if (document.getElementById(top).style.backgroundColor == "yellow") {
+      document.getElementById(top).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(top).style.backgroundColor = "yellow";
+    }
+  }
+  function colorchangebottommiddle(n) {
+    if (document.getElementById(n).style.backgroundColor == "yellow") {
+      document.getElementById(n).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(n).style.backgroundColor = "yellow";
+    }
+    var right = n + 1
+    if (document.getElementById(right).style.backgroundColor == "yellow") {
+      document.getElementById(right).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(right).style.backgroundColor = "yellow";
+    }
+    var left = n - 1
+    if (document.getElementById(left).style.backgroundColor == "yellow") {
+      document.getElementById(left).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(left).style.backgroundColor = "yellow";
+    }
+    var top = n - 10
+    if (document.getElementById(top).style.backgroundColor == "yellow") {
+      document.getElementById(top).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(top).style.backgroundColor = "yellow";
+    }
+  }
+  function colorchangebottomright(n) {
+    if (document.getElementById(n).style.backgroundColor == "yellow") {
+      document.getElementById(n).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(n).style.backgroundColor = "yellow";
+    }
+    var left = n - 1
+    if (document.getElementById(left).style.backgroundColor == "yellow") {
+      document.getElementById(left).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(left).style.backgroundColor = "yellow";
+    }
+    var top = n - 10
+    if (document.getElementById(top).style.backgroundColor == "yellow") {
+      document.getElementById(top).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(top).style.backgroundColor = "yellow";
+    }
+  }
+  function colorchangebottomleft(n) {
+    if (document.getElementById(n).style.backgroundColor == "yellow") {
+      document.getElementById(n).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(n).style.backgroundColor = "yellow";
+    }
+    var right = n + 1
+    if (document.getElementById(right).style.backgroundColor == "yellow") {
+      document.getElementById(right).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(right).style.backgroundColor = "yellow";
+    }
+    var top = n - 10
+    if (document.getElementById(top).style.backgroundColor == "yellow") {
+      document.getElementById(top).style.backgroundColor = "lightgray";
+    } else {
+      document.getElementById(top).style.backgroundColor = "yellow";
+    }
+  }
+</script>
+<body>
+  <table>
+    <tr>
+      <td><button id=11 onclick="colorchangeleft(11)"></button></td>
+      <td><button id=12 onclick="colorchange(12)"></button></td>
+      <td><button id=13 onclick="colorchange(13)"></button></td>
+      <td><button id=14 onclick="colorchangeright(14)"></button></td>
+    </tr>
+    <tr>
+      <td><button id=21 onclick="colorchangeleft(21)"></button></td>
+      <td><button id=22 onclick="colorchange(22)"></button></td>
+      <td><button id=23 onclick="colorchange(23)"></button></td>
+      <td><button id=24 onclick="colorchangeright(24)"></button></td>
+    </tr>
+    <tr>
+      <td><button id=31 onclick="colorchangeleft(31)"></button></td>
+      <td><button id=32 onclick="colorchange(32)"></button></td>
+      <td><button id=33 onclick="colorchange(33)"></button></td>
+      <td><button id=34 onclick="colorchangeright(34)"></button></td>
+    </tr>
+    <tr>
+      <td><button id=41 onclick="colorchangebottomleft(41)"></button></td>
+      <td><button id=42 onclick="colorchangebottommiddle(42)"></button></td>
+      <td><button id=43 onclick="colorchangebottommiddle(43)"></button></td>
+      <td><button id=44 onclick="colorchangebottomright(44)"></button></td>
+    </tr>
+  </table>
+</body>
