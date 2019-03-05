@@ -1,0 +1,69 @@
+<html>
+</html>
+<head>
+</head>
+<style>
+ button {
+   background-color: lightgray;
+   width: 100px;
+   height: 100px;
+ }
+ .gamemode {
+   background color: lightgray;
+   width: 75px;
+   height: 75px;
+ }
+ table {
+   margin: auto;
+ }
+ select {
+   width: 101px
+ }
+</style>
+<script>
+var turn = "x"
+function move(n) {
+  if (document.getElementById(n).innerHTML == "x") {
+    return
+  }
+  if (document.getElementById(n).innerHTML == "o") {
+    return
+  }
+  document.getElementById(n).innerHTML = turn
+if (turn == "x") {
+  turn = "o"
+} else {
+  turn = "x"
+}
+}
+</script>
+<body>
+  <center>
+  <select name="gamemode" size="1">
+    <option>One Player
+    </option>
+    <option>Two Player
+    </option>
+  </select>
+</center>
+  <table>
+
+      <tr>
+        <td><button id=1 onclick="move(1)"></button></td>
+        <td><button id=2 onclick="move(2)"></td>
+        <td><button id=3 onclick="move(3)"></td>
+      </tr>
+      <tr>
+        <td><button id=4 onclick="move(4)"></td>
+        <td><button id=5 onclick="move(5)"></td>
+        <td><button id=6 onclick="move(6)"></td>
+      </tr>
+      <tr>
+        <td><button id=7 onclick="move(7)"></td>
+        <td><button id=8 onclick="move(8)"></td>
+        <td><button id=9 onclick="move(9)"></td>
+      </tr>
+
+    </table>
+</table>
+</body>
