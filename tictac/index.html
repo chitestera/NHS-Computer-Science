@@ -3,10 +3,16 @@
 <head>
 </head>
 <style>
- button {
+ div {
    background-color: lightgray;
    width: 100px;
    height: 100px;
+   text-align: center;
+   justify-content: center;
+   display: flex;
+   align-items: center;
+   font-size: 50px;
+   font-family: monospace;
  }
  .gamemode {
    background color: lightgray;
@@ -22,7 +28,74 @@
 </style>
 <script>
 var turn = "x"
+function winconditions() {
+  if (document.getElementById(1).innerHTML != "") {
+    if (document.getElementById(1).innerHTML == document.getElementById(2).innerHTML) {
+      if (document.getElementById(2).innerHTML == document.getElementById(3).innerHTML) {
+        alert(document.getElementById(2).innerHTML + " won!")
+        window.location.reload()
+      }
+    }
+  }
+  if (document.getElementById(4).innerHTML != "") {
+    if (document.getElementById(4).innerHTML == document.getElementById(5).innerHTML) {
+      if (document.getElementById(5).innerHTML == document.getElementById(6).innerHTML) {
+        alert(document.getElementById(6).innerHTML + " won!")
+        window.location.reload()
+    }
+  }
+}
+if (document.getElementById(7).innerHTML != "") {
+  if (document.getElementById(7).innerHTML == document.getElementById(8).innerHTML) {
+    if (document.getElementById(8).innerHTML == document.getElementById(9).innerHTML) {
+      alert(document.getElementById(9).innerHTML + " won!")
+      window.location.reload()
+  }
+}
+}
+if (document.getElementById(1).innerHTML != "") {
+  if (document.getElementById(1).innerHTML == document.getElementById(4).innerHTML) {
+    if (document.getElementById(4).innerHTML == document.getElementById(7).innerHTML) {
+      alert(document.getElementById(7).innerHTML + " won!")
+      window.location.reload()
+  }
+}
+}
+if (document.getElementById(2).innerHTML != "") {
+  if (document.getElementById(2).innerHTML == document.getElementById(5).innerHTML) {
+    if (document.getElementById(5).innerHTML == document.getElementById(8).innerHTML) {
+      alert(document.getElementById(8).innerHTML + " won!")
+      window.location.reload()
+  }
+}
+}
+if (document.getElementById(3).innerHTML != "") {
+  if (document.getElementById(3).innerHTML == document.getElementById(6).innerHTML) {
+    if (document.getElementById(6).innerHTML == document.getElementById(9).innerHTML) {
+      alert(document.getElementById(9).innerHTML + " won!")
+      window.location.reload()
+  }
+}
+}
+if (document.getElementById(1).innerHTML != "") {
+  if (document.getElementById(1).innerHTML == document.getElementById(5).innerHTML) {
+    if (document.getElementById(5).innerHTML == document.getElementById(9).innerHTML) {
+      alert(document.getElementById(9).innerHTML + " won!")
+      window.location.reload()
+  }
+}
+}
+if (document.getElementById(3).innerHTML != "") {
+  if (document.getElementById(3).innerHTML == document.getElementById(5).innerHTML) {
+    if (document.getElementById(5).innerHTML == document.getElementById(7).innerHTML) {
+      alert(document.getElementById(7).innerHTML + " won!")
+      window.location.reload()
+  }
+}
+}
+}
 function move(n) {
+  if 
   if (document.getElementById(n).innerHTML == "x") {
     return
   }
@@ -35,35 +108,42 @@ if (turn == "x") {
 } else {
   turn = "x"
 }
+winconditions()
+}
+function tie() {
+var i;
+for (i=1; i <10; i++) {
+  if (document.getElementById(i).innerHTML != "") {
+  }
+}
+  alert('TIE')
 }
 </script>
 <body>
   <center>
   <select name="gamemode" size="1">
-    <option>One Player
+    <option value="one">One Player
     </option>
-    <option>Two Player
+    <option value="two">Two Player
     </option>
   </select>
 </center>
   <table>
-
       <tr>
-        <td><button id=1 onclick="move(1)"></button></td>
-        <td><button id=2 onclick="move(2)"></td>
-        <td><button id=3 onclick="move(3)"></td>
+        <td><div id=1 onclick="move(1)"></div></td>
+        <td><div id=2 onclick="move(2)"></div></td>
+        <td><div id=3 onclick="move(3)"></div></td>
       </tr>
       <tr>
-        <td><button id=4 onclick="move(4)"></td>
-        <td><button id=5 onclick="move(5)"></td>
-        <td><button id=6 onclick="move(6)"></td>
+        <td><div id=4 onclick="move(4)"></div></td>
+        <td><div id=5 onclick="move(5)"></div></td>
+        <td><div id=6 onclick="move(6)"></div></td>
       </tr>
       <tr>
-        <td><button id=7 onclick="move(7)"></td>
-        <td><button id=8 onclick="move(8)"></td>
-        <td><button id=9 onclick="move(9)"></td>
+        <td><div id=7 onclick="move(7)"></div></td>
+        <td><div id=8 onclick="move(8)"></div></td>
+        <td><div id=9 onclick="move(9)"></div></td>
       </tr>
-
     </table>
 </table>
 </body>
