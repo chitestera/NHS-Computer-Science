@@ -15,9 +15,7 @@
    font-family: monospace;
  }
  .gamemode {
-   background color: lightgray;
-   width: 75px;
-   height: 75px;
+   font-size: 14px;
  }
  table {
    margin: auto;
@@ -94,41 +92,62 @@ if (document.getElementById(3).innerHTML != "") {
 }
 }
 }
+function togglemode() {
+  if (document.getElementById(10).innerHTML == "two player") {
+    document.getElementById(10).innerHTML = "one player"
+  } else {
+    document.getElementById(10).innerHTML = "two player"
+  }
+}
 function move(n) {
-  if 
   if (document.getElementById(n).innerHTML == "x") {
     return
   }
   if (document.getElementById(n).innerHTML == "o") {
     return
   }
-  document.getElementById(n).innerHTML = turn
+    document.getElementById(n).innerHTML = turn
+  random()
+  if (document.getElementById(10).innerHTML == "one player") {
+    return
+  }
 if (turn == "x") {
   turn = "o"
 } else {
   turn = "x"
 }
+
 winconditions()
 }
-function tie() {
-var i;
-for (i=1; i <10; i++) {
-  if (document.getElementById(i).innerHTML != "") {
+function random() {
+  var n = Math.floor(Math.random()*9) + 1
+  if (document.getElementById(10).innerHTML == "one player") {
+    if (document.getElementById(n).innerHTML == "x") {
+      random()
+      return
+    }
+    if (document.getElementById(n).innerHTML == "o") {
+      random()
+      return
+    }
+    document.getElementById(n).innerHTML = "o"
   }
 }
-  alert('TIE')
+function reset() {
+var b;
+for (b=1; b<10; b++) {
+  document.getElementById(b).innerHTML = ""
+  }
 }
 </script>
 <body>
   <center>
-  <select name="gamemode" size="1">
-    <option value="one">One Player
-    </option>
-    <option value="two">Two Player
-    </option>
-  </select>
 </center>
   <table>
+      <tr>
+        <td><div id=10 onclick="togglemode()" class="gamemode">two player</div></td>
+        <td><div id=11 onclick="reset()" class="gamemode">reset</div></td>
+      </tr>
       <tr>
         <td><div id=1 onclick="move(1)"></div></td>
         <td><div id=2 onclick="move(2)"></div></td>
