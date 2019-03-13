@@ -23,6 +23,8 @@
  select {
    width: 101px
  }
+ p {
+ }
 </style>
 <script>
 var turn = "x"
@@ -30,64 +32,56 @@ function winconditions() {
   if (document.getElementById(1).innerHTML != "") {
     if (document.getElementById(1).innerHTML == document.getElementById(2).innerHTML) {
       if (document.getElementById(2).innerHTML == document.getElementById(3).innerHTML) {
-        alert(document.getElementById(2).innerHTML + " won!")
-        window.location.reload()
+        document.getElementById(12).innerHTML = (document.getElementById(2).innerHTML + " won!")
       }
     }
   }
   if (document.getElementById(4).innerHTML != "") {
     if (document.getElementById(4).innerHTML == document.getElementById(5).innerHTML) {
       if (document.getElementById(5).innerHTML == document.getElementById(6).innerHTML) {
-        alert(document.getElementById(6).innerHTML + " won!")
-        window.location.reload()
+        document.getElementById(12).innerHTML = (document.getElementById(5).innerHTML + " won!")
     }
   }
 }
 if (document.getElementById(7).innerHTML != "") {
   if (document.getElementById(7).innerHTML == document.getElementById(8).innerHTML) {
     if (document.getElementById(8).innerHTML == document.getElementById(9).innerHTML) {
-      alert(document.getElementById(9).innerHTML + " won!")
-      window.location.reload()
+      document.getElementById(12).innerHTML = (document.getElementById(9).innerHTML + " won!")
   }
 }
 }
 if (document.getElementById(1).innerHTML != "") {
   if (document.getElementById(1).innerHTML == document.getElementById(4).innerHTML) {
     if (document.getElementById(4).innerHTML == document.getElementById(7).innerHTML) {
-      alert(document.getElementById(7).innerHTML + " won!")
-      window.location.reload()
+      document.getElementById(12).innerHTML = (document.getElementById(7).innerHTML + " won!")
   }
 }
 }
 if (document.getElementById(2).innerHTML != "") {
   if (document.getElementById(2).innerHTML == document.getElementById(5).innerHTML) {
     if (document.getElementById(5).innerHTML == document.getElementById(8).innerHTML) {
-      alert(document.getElementById(8).innerHTML + " won!")
-      window.location.reload()
+      document.getElementById(12).innerHTML = (document.getElementById(8).innerHTML + " won!")
   }
 }
 }
 if (document.getElementById(3).innerHTML != "") {
   if (document.getElementById(3).innerHTML == document.getElementById(6).innerHTML) {
     if (document.getElementById(6).innerHTML == document.getElementById(9).innerHTML) {
-      alert(document.getElementById(9).innerHTML + " won!")
-      window.location.reload()
+      document.getElementById(12).innerHTML = (document.getElementById(9).innerHTML + " won!")
   }
 }
 }
 if (document.getElementById(1).innerHTML != "") {
   if (document.getElementById(1).innerHTML == document.getElementById(5).innerHTML) {
     if (document.getElementById(5).innerHTML == document.getElementById(9).innerHTML) {
-      alert(document.getElementById(9).innerHTML + " won!")
-      window.location.reload()
+      document.getElementById(12).innerHTML = (document.getElementById(9).innerHTML + " won!")
   }
 }
 }
 if (document.getElementById(3).innerHTML != "") {
   if (document.getElementById(3).innerHTML == document.getElementById(5).innerHTML) {
     if (document.getElementById(5).innerHTML == document.getElementById(7).innerHTML) {
-      alert(document.getElementById(7).innerHTML + " won!")
-      window.location.reload()
+      document.getElementById(12).innerHTML = (document.getElementById(7).innerHTML + " won!")
   }
 }
 }
@@ -100,6 +94,9 @@ function togglemode() {
   }
 }
 function move(n) {
+  if (document.getElementById(10).innerHTML == "one player") {
+    turn == "x"
+  }
   if (document.getElementById(n).innerHTML == "x") {
     return
   }
@@ -134,10 +131,11 @@ function random() {
   }
 }
 function reset() {
+turn == "x"
 var b;
 for (b=1; b<10; b++) {
   document.getElementById(b).innerHTML = ""
-  }
+}
 }
 </script>
 <body>
@@ -147,6 +145,7 @@ for (b=1; b<10; b++) {
       <tr>
         <td><div id=10 onclick="togglemode()" class="gamemode">two player</div></td>
         <td><div id=11 onclick="reset()" class="gamemode">reset</div></td>
+        <td><div id=12 class="gamemode"></div></td>
       </tr>
       <tr>
         <td><div id=1 onclick="move(1)"></div></td>
