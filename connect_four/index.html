@@ -1,1 +1,228 @@
 <head>
+</head>
+<body>
+  <style>
+  h1 {
+  }
+  div {
+    height: 100px;
+    width: 100px;
+    background-color: #646464;
+    border: 1px solid #333333;
+  }
+  body {
+    background-color: #fefefe;
+  }
+  table {
+    margin: auto;
+    border-spacing: 0px;
+  }
+  tr, td {
+    margin: 0px;
+    padding: 0px;
+  }
+  .toprow:hover {
+    background-color: #444444;
+  }
+  </style>
+  <script>
+  var turn = "#ffc60b"
+  function place(n) {
+    document.getElementById(n+7).style.backgroundColor = turn
+    if (turn == "#ffc60b") {
+      turn = "#ff8b00"
+    } else {
+      turn = "#ffc60b"
+    }
+
+  }
+  </script>
+
+  <table>
+    <tr>
+      <td colspan=7>
+        <h1>CONNECT FOUR</h1>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="toprow" id=1 onclick="place(1)">
+        </div>
+      </td>
+      <td>
+        <div class="toprow" id=2 onclick="place(2)">
+        </div>
+      </td>
+      <td>
+        <div class="toprow" id=3 onclick="place(3)">
+        </div>
+      </td>
+      <td>
+        <div class="toprow" id=4 onclick="place(4)">
+        </div>
+      </td>
+      <td>
+        <div class="toprow" id=5 onclick="place(5)">
+        </div>
+      </td>
+      <td>
+        <div class="toprow" id=6 onclick="place(6)">
+        </div>
+      </td>
+      <td>
+        <div class="toprow" id=7 onclick="place(7)">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div id=8>
+        </div>
+      </td>
+      <td>
+        <div id=9>
+        </div>
+      </td>
+      <td>
+        <div id=10>
+        </div>
+      </td>
+      <td>
+        <div id=11>
+        </div>
+      </td>
+      <td>
+        <div id=12>
+        </div>
+      </td>
+      <td>
+        <div id=13>
+        </div>
+      </td>
+      <td>
+        <div id=14>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div id=15>
+        </div>
+      </td>
+      <td>
+        <div id=16>
+        </div>
+      </td>
+      <td>
+        <div id=17>
+        </div>
+      </td>
+      <td>
+        <div id=18>
+        </div>
+      </td>
+      <td>
+        <div id=19>
+        </div>
+      </td>
+      <td>
+        <div id=20>
+        </div>
+      </td>
+      <td>
+        <div id=21>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div id=22>
+        </div>
+      </td>
+      <td>
+        <div id=23>
+        </div>
+      </td>
+      <td>
+        <div id=24>
+        </div>
+      </td>
+      <td>
+        <div id=25>
+        </div>
+      </td>
+      <td>
+        <div id=26>
+        </div>
+      </td>
+      <td>
+        <div id=27>
+        </div>
+      </td>
+      <td>
+        <div id=28>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div id=29>
+        </div>
+      </td>
+      <td>
+        <div id=30>
+        </div>
+      </td>
+      <td>
+        <div id=31>
+        </div>
+      </td>
+      <td>
+        <div id=32>
+        </div>
+      </td>
+      <td>
+        <div id=33>
+        </div>
+      </td>
+      <td>
+        <div id=34>
+        </div>
+      </td>
+      <td>
+        <div id=35>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div id=36>
+        </div>
+      </td>
+      <td>
+        <div id=37>
+        </div>
+      </td>
+      <td>
+        <div id=38>
+        </div>
+      </td>
+      <td>
+        <div id=39>
+        </div>
+      </td>
+      <td>
+        <div id=40>
+        </div>
+      </td>
+      <td>
+        <div id=41>
+        </div>
+      </td>
+      <td>
+        <div id=42>
+        </div>
+      </td>
+    </tr>
+  </table>
+</body>
