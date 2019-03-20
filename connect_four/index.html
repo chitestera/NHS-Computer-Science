@@ -7,7 +7,8 @@
   div {
     height: 100px;
     width: 100px;
-    background-color: #646464;
+    /*background-color: #646464;*/
+    background-color:gray;
     border: 1px solid #333333;
   }
   body {
@@ -26,16 +27,72 @@
   }
   </style>
   <script>
-  var turn = "#ffc60b"
-  function place(n) {
-    document.getElementById(n+7).style.backgroundColor = turn
-    if (turn == "#ffc60b") {
-      turn = "#ff8b00"
-    } else {
-      turn = "#ffc60b"
-    }
 
+  turn = "#ffc60b";
+  yellow = "ffc60b";
+  orange = "ff8b00";
+
+  function place(n) {
+    n = n + 35;
+    if (document.getElementById(n).style.backgroundColor == "gray") {
+      document.getElementById(n).style.backgroundColor = turn;
+      if (turn == orange) {
+        turn = yellow;
+      } else {
+        turn = orange;
+      }
+    } else {
+    n = n - 7;
+    if (document.getElementById(n).style.backgroundColor == "gray") {
+      document.getElementById(n).style.backgroundColor = turn;
+      if (turn == orange) {
+        turn = yellow;
+      } else {
+        turn = orange;
+      }
+    } else {
+      n = n - 7;
+      if (document.getElementById(n).style.backgroundColor == "gray") {
+        document.getElementById(n).style.backgroundColor = turn;
+        if (turn == orange) {
+          turn = yellow;
+        } else {
+          turn = orange;
+        }
+    } else {
+      n = n - 7;
+      if (document.getElementById(n).style.backgroundColor == "gray") {
+        document.getElementById(n).style.backgroundColor = turn;
+        if (turn == orange) {
+          turn = yellow;
+        } else {
+          turn = orange;
+        }
+    } else {
+      n = n - 7;
+      if (document.getElementById(n).style.backgroundColor == "gray") {
+        document.getElementById(n).style.backgroundColor = turn;
+        if (turn == orange) {
+          turn = yellow;
+        } else {
+          turn = orange;
+        }
+    } else {
+      n = n - 7;
+      if (document.getElementById(n).style.backgroundColor == "gray") {
+        document.getElementById(n).style.backgroundColor = turn;
+        if (turn == orange) {
+          turn = yellow;
+        } else {
+          turn = orange;
+        }
+    }
   }
+}
+}
+}
+}
+}
   </script>
 
   <table>
@@ -46,181 +103,181 @@
     </tr>
     <tr>
       <td>
-        <div class="toprow" id=1 onclick="place(1)">
+        <div class="toprow" id=1 onclick="place(1)" style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div class="toprow" id=2 onclick="place(2)">
+        <div class="toprow" id=2 onclick="place(2)" style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div class="toprow" id=3 onclick="place(3)">
+        <div class="toprow" id=3 onclick="place(3)" style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div class="toprow" id=4 onclick="place(4)">
+        <div class="toprow" id=4 onclick="place(4)" style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div class="toprow" id=5 onclick="place(5)">
+        <div class="toprow" id=5 onclick="place(5)" style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div class="toprow" id=6 onclick="place(6)">
+        <div class="toprow" id=6 onclick="place(6)" style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div class="toprow" id=7 onclick="place(7)">
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div id=8>
-        </div>
-      </td>
-      <td>
-        <div id=9>
-        </div>
-      </td>
-      <td>
-        <div id=10>
-        </div>
-      </td>
-      <td>
-        <div id=11>
-        </div>
-      </td>
-      <td>
-        <div id=12>
-        </div>
-      </td>
-      <td>
-        <div id=13>
-        </div>
-      </td>
-      <td>
-        <div id=14>
+        <div class="toprow" id=7 onclick="place(7)" style="background-color:gray;">
         </div>
       </td>
     </tr>
     <tr>
       <td>
-        <div id=15>
+        <div id=8 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=16>
+        <div id=9 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=17>
+        <div id=10 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=18>
+        <div id=11 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=19>
+        <div id=12 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=20>
+        <div id=13 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=21>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div id=22>
-        </div>
-      </td>
-      <td>
-        <div id=23>
-        </div>
-      </td>
-      <td>
-        <div id=24>
-        </div>
-      </td>
-      <td>
-        <div id=25>
-        </div>
-      </td>
-      <td>
-        <div id=26>
-        </div>
-      </td>
-      <td>
-        <div id=27>
-        </div>
-      </td>
-      <td>
-        <div id=28>
+        <div id=14 style="background-color:gray;">
         </div>
       </td>
     </tr>
     <tr>
       <td>
-        <div id=29>
+        <div id=15 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=30>
+        <div id=16 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=31>
+        <div id=17 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=32>
+        <div id=18 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=33>
+        <div id=19 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=34>
+        <div id=20 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=35>
+        <div id=21 style="background-color:gray;">
         </div>
       </td>
     </tr>
     <tr>
       <td>
-        <div id=36>
+        <div id=22 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=37>
+        <div id=23 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=38>
+        <div id=24 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=39>
+        <div id=25 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=40>
+        <div id=26 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=41>
+        <div id=27 style="background-color:gray;">
         </div>
       </td>
       <td>
-        <div id=42>
+        <div id=28 style="background-color:gray;">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div id=29 style="background-color:gray;">
+        </div>
+      </td>
+      <td>
+        <div id=30 style="background-color:gray;">
+        </div>
+      </td>
+      <td>
+        <div id=31 style="background-color:gray;">
+        </div>
+      </td>
+      <td>
+        <div id=32 style="background-color:gray;">
+        </div>
+      </td>
+      <td>
+        <div id=33 style="background-color:gray;">
+        </div>
+      </td>
+      <td>
+        <div id=34 style="background-color:gray;">
+        </div>
+      </td>
+      <td>
+        <div id=35 style="background-color:gray;">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div id=36 style="background-color:gray;">
+        </div>
+      </td>
+      <td>
+        <div id=37 style="background-color:gray;">
+        </div>
+      </td>
+      <td>
+        <div id=38 style="background-color:gray;">
+        </div>
+      </td>
+      <td>
+        <div id=39 style="background-color:gray;">
+        </div>
+      </td>
+      <td>
+        <div id=40 style="background-color:gray;">
+        </div>
+      </td>
+      <td>
+        <div id=41 style="background-color:gray;">
+        </div>
+      </td>
+      <td>
+        <div id=42 style="background-color:gray;">
         </div>
       </td>
     </tr>
