@@ -3,18 +3,18 @@
 <body>
   <style>
   div {
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
     background-color:white;
     border-radius: 50%;
-    border: 1px solid #333333;
   }
   body {
-    background-color: #fefefe;
+    background-color: white;
   }
-  table {
+  .board {
     margin: auto;
     border-spacing: 5px;
+    background-color: gray;
   }
   tr, td {
     margin: 0px;
@@ -23,23 +23,29 @@
   .box {
     border-radius: 0%;
     height: inherit;
-    width: 760px;
+    width: 530px;
     background-color: gray;
     margin: auto;
-    border: solid black 1px;
 
+  }
+  p {
+    font-size: 14px;
   }
   </style>
   <script>
-
+/*Setting up variables*/
   turn = "#ffc60b";
   yellow = "ffc60b";
   orange = "ff8b00";
-
+/*reloads the page*/
   function reset() {
     window.location.reload()
   }
-
+/*
+checks the lowest row and if it's taken
+checks the row above until it can place it.
+n is the id of the column clicked.
+*/
   function place(n) {
     n = n + 35;
     if (document.getElementById(n).style.backgroundColor == "white") {
@@ -102,20 +108,19 @@
 }
 }
   </script>
-  <table>
-    <tr>
-      <td>
-        <button onclick="reset()">Reset</button>
-      </td>
-      <td colspan="3">
-      </td>
-      <td colspan="3">
-        <p><strong>Directions: </strong>Click the top row to place a tile in the corresponding column. </p>
-      </td>
-    </tr>
-  </table>
-    <div class="box">
+  <center>
     <table>
+      <tr>
+        <td>
+          <button onclick="reset()">Reset</button>
+        </td>
+        <td>
+          <p> <strong> Directions: </strong>
+    Click the top row to place a tile in the corresponding column.
+          </p>
+        </td>
+  </center>
+    <table class="board">
     <tr>
       <td>
         <div id=1 onclick="place(1)" style="background-color:white;">
@@ -297,5 +302,4 @@
       </td>
     </tr>
   </table>
-</div>
-</body
+</body>
